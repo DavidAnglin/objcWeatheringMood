@@ -10,6 +10,7 @@
 
 @interface OCWeatherViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *zipCodeSearch;
 
 @end
 

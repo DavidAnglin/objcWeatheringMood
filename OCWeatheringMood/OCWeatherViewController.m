@@ -14,14 +14,17 @@
 
 @implementation OCWeatherViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (IBAction)moodyFace:(UIButton *)sender {
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
 }
+
+
 
 @end
