@@ -7,15 +7,28 @@
 //
 
 #import "OCExpressionView.h"
+@import UIKit;
 
 @implementation OCExpressionView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+@synthesize faceCenter, faceRadius, scale, color, linewidth;
+
+- (UIBezierPath *)createArcPath
+{
+    UIBezierPath *facePath = [UIBezierPath bezierPathWithArcCenter: _faceCenter
+                                                            radius: _faceRadius
+                                                        startAngle: 0
+                                                          endAngle: (2*M_PI)
+                                                         clockwise: YES];
+    return facePath;
+    
 }
-*/
+
+
+- (void)drawRect:(CGRect)rect {
+
+
+}
 
 @end
+
