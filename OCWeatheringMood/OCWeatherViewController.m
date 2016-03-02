@@ -6,13 +6,13 @@
 //  Copyright © 2016 David Anglin. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "OCWeatherViewController.h"
 
-@interface ViewController ()
+@interface OCWeatherViewController ()
 
 @end
 
-@implementation ViewController
+@implementation OCWeatherViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

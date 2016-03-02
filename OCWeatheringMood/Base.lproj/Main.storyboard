@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weathering Mood-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="OCWeatherViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,12 +17,78 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How does the weather make you feel?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Rru-3e-DZ7">
+                                <rect key="frame" x="20" y="72" width="560" height="78"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Zip Code: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dt2-07-JE5">
+                                <rect key="frame" x="187" y="217" width="227" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="5qO-1i-IiS"/>
+                                    <constraint firstAttribute="width" constant="227" id="b5z-2w-fPa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="92585" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M2q-dy-Emo">
+                                <rect key="frame" x="187" y="271" width="227" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi4-1n-I4c">
+                                <rect key="frame" x="187" y="309" width="227" height="50"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="See what Californians Think?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rru-3e-DZ7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8rT-CZ-J9F"/>
+                            <constraint firstItem="Rru-3e-DZ7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Bpt-dx-mAI"/>
+                            <constraint firstItem="Rru-3e-DZ7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Lvo-aV-wZY"/>
+                            <constraint firstItem="dt2-07-JE5" firstAttribute="centerX" secondItem="Rru-3e-DZ7" secondAttribute="centerX" id="Lx5-a1-iaW"/>
+                            <constraint firstItem="M2q-dy-Emo" firstAttribute="top" secondItem="dt2-07-JE5" secondAttribute="bottom" constant="8" symbolic="YES" id="eJL-if-X1M"/>
+                            <constraint firstItem="M2q-dy-Emo" firstAttribute="trailing" secondItem="dt2-07-JE5" secondAttribute="trailing" id="g0d-Wp-FdX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rru-3e-DZ7" secondAttribute="bottom" constant="450" id="iTM-A1-QsU"/>
+                            <constraint firstItem="M2q-dy-Emo" firstAttribute="leading" secondItem="dt2-07-JE5" secondAttribute="leading" id="vzs-1k-l9n"/>
+                            <constraint firstItem="dt2-07-JE5" firstAttribute="top" secondItem="Rru-3e-DZ7" secondAttribute="bottom" constant="67" id="vzu-r9-CFR"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Weathering Mood" id="n2r-qq-x0b"/>
+                    <connections>
+                        <segue destination="oRu-4C-jkz" kind="showDetail" identifier="faceDecision" id="Mzq-SI-ERo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146" y="158"/>
+            <point key="canvasLocation" x="1090" y="170"/>
+        </scene>
+        <!--Happy Sad View Controller-->
+        <scene sceneID="Rt0-JT-KpT">
+            <objects>
+                <viewController id="Hrg-TE-hIg" customClass="OCHappySadViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yf9-iq-dBd"/>
+                        <viewControllerLayoutGuide type="bottom" id="SWk-Rz-Lce"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pC1-XW-pH6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AUL-c0-VCL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUQ-sY-SaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="938"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ub7-7p-R9b">
@@ -31,6 +98,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nV0-N0-CTa"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3n-JI-FNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,6 +117,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wo-um-ZoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-490" y="456"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4rB-jK-ocK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oRu-4C-jkz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7P1-rw-gR0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hrg-TE-hIg" kind="relationship" relationship="rootViewController" id="XOZ-Rf-Rtw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ze-5m-zHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="938"/>
         </scene>
     </scenes>
 </document>

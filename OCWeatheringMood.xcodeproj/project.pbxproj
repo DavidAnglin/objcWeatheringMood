@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		D7C3F0D11C865E99002A561E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C3F0D01C865E99002A561E /* main.m */; };
 		D7C3F0D41C865E99002A561E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C3F0D31C865E99002A561E /* AppDelegate.m */; };
-		D7C3F0D71C865E99002A561E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C3F0D61C865E99002A561E /* ViewController.m */; };
+		D7C3F0D71C865E99002A561E /* OCWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C3F0D61C865E99002A561E /* OCWeatherViewController.m */; };
 		D7C3F0DA1C865E99002A561E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7C3F0D81C865E99002A561E /* Main.storyboard */; };
 		D7C3F0DC1C865E99002A561E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7C3F0DB1C865E99002A561E /* Assets.xcassets */; };
 		D7C3F0DF1C865E99002A561E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7C3F0DD1C865E99002A561E /* LaunchScreen.storyboard */; };
 		D7C3F0EA1C865E99002A561E /* OCWeatheringMoodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C3F0E91C865E99002A561E /* OCWeatheringMoodTests.m */; };
 		D7C3F0F51C865E99002A561E /* OCWeatheringMoodUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C3F0F41C865E99002A561E /* OCWeatheringMoodUITests.m */; };
+		D7DAC85E1C87421100CBA456 /* OCExpressionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DAC85D1C87421100CBA456 /* OCExpressionView.m */; };
+		D7DAC8611C87424C00CBA456 /* OCHappySadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DAC8601C87424C00CBA456 /* OCHappySadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,8 @@
 		D7C3F0D01C865E99002A561E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7C3F0D21C865E99002A561E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D7C3F0D31C865E99002A561E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D7C3F0D51C865E99002A561E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D7C3F0D61C865E99002A561E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D7C3F0D51C865E99002A561E /* OCWeatherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCWeatherViewController.h; sourceTree = "<group>"; };
+		D7C3F0D61C865E99002A561E /* OCWeatherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCWeatherViewController.m; sourceTree = "<group>"; };
 		D7C3F0D91C865E99002A561E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7C3F0DB1C865E99002A561E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7C3F0DE1C865E99002A561E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		D7C3F0F01C865E99002A561E /* OCWeatheringMoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCWeatheringMoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C3F0F41C865E99002A561E /* OCWeatheringMoodUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCWeatheringMoodUITests.m; sourceTree = "<group>"; };
 		D7C3F0F61C865E99002A561E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7DAC85C1C87421100CBA456 /* OCExpressionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCExpressionView.h; sourceTree = "<group>"; };
+		D7DAC85D1C87421100CBA456 /* OCExpressionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCExpressionView.m; sourceTree = "<group>"; };
+		D7DAC85F1C87424C00CBA456 /* OCHappySadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHappySadViewController.h; sourceTree = "<group>"; };
+		D7DAC8601C87424C00CBA456 /* OCHappySadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCHappySadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +107,13 @@
 		D7C3F0CE1C865E99002A561E /* OCWeatheringMood */ = {
 			isa = PBXGroup;
 			children = (
-				D7C3F0D21C865E99002A561E /* AppDelegate.h */,
-				D7C3F0D31C865E99002A561E /* AppDelegate.m */,
-				D7C3F0D51C865E99002A561E /* ViewController.h */,
-				D7C3F0D61C865E99002A561E /* ViewController.m */,
 				D7C3F0D81C865E99002A561E /* Main.storyboard */,
-				D7C3F0DB1C865E99002A561E /* Assets.xcassets */,
-				D7C3F0DD1C865E99002A561E /* LaunchScreen.storyboard */,
-				D7C3F0E01C865E99002A561E /* Info.plist */,
+				D7DAC85F1C87424C00CBA456 /* OCHappySadViewController.h */,
+				D7DAC8601C87424C00CBA456 /* OCHappySadViewController.m */,
+				D7C3F0D51C865E99002A561E /* OCWeatherViewController.h */,
+				D7C3F0D61C865E99002A561E /* OCWeatherViewController.m */,
+				D7DAC85C1C87421100CBA456 /* OCExpressionView.h */,
+				D7DAC85D1C87421100CBA456 /* OCExpressionView.m */,
 				D7C3F0CF1C865E99002A561E /* Supporting Files */,
 			);
 			path = OCWeatheringMood;
@@ -117,6 +122,11 @@
 		D7C3F0CF1C865E99002A561E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D7C3F0DB1C865E99002A561E /* Assets.xcassets */,
+				D7C3F0E01C865E99002A561E /* Info.plist */,
+				D7C3F0DD1C865E99002A561E /* LaunchScreen.storyboard */,
+				D7C3F0D21C865E99002A561E /* AppDelegate.h */,
+				D7C3F0D31C865E99002A561E /* AppDelegate.m */,
 				D7C3F0D01C865E99002A561E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -273,8 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7C3F0D71C865E99002A561E /* ViewController.m in Sources */,
+				D7DAC8611C87424C00CBA456 /* OCHappySadViewController.m in Sources */,
+				D7C3F0D71C865E99002A561E /* OCWeatherViewController.m in Sources */,
 				D7C3F0D41C865E99002A561E /* AppDelegate.m in Sources */,
+				D7DAC85E1C87421100CBA456 /* OCExpressionView.m in Sources */,
 				D7C3F0D11C865E99002A561E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +513,7 @@
 				D7C3F0FB1C865E99002A561E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7C3F0FC1C865E99002A561E /* Build configuration list for PBXNativeTarget "OCWeatheringMoodTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +522,7 @@
 				D7C3F0FE1C865E99002A561E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7C3F0FF1C865E99002A561E /* Build configuration list for PBXNativeTarget "OCWeatheringMoodUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +531,7 @@
 				D7C3F1011C865E99002A561E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
