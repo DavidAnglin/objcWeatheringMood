@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OCExpressionView.h"
 
-@interface OCHappySadViewController : UIViewController
+@interface OCHappySadViewController : UIViewController;
+
+@property (weak, nonatomic) IBOutlet OCExpressionView *expressionView;
 
 @end

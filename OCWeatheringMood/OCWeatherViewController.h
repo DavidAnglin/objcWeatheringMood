@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  OCWeatherViewController.h
 //  OCWeatheringMood
 //
 //  Created by David Anglin on 3/1/16.
@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OCExpressionView.h"
+#import "OCHappySadViewController.h"
 
-@interface OCWeatherViewController : UIViewController
+@interface OCWeatherViewController : OCHappySadViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *zipCodeSearch;
+
 
 @end
 

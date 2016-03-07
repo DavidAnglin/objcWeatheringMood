@@ -11,26 +11,23 @@
 
 @interface OCExpressionView ()
 
-@property (nonatomic) CGRect bounds;
-@property (nonatomic) CGPoint center;
-@property(nonatomic, readonly) UIView *superview;
 
 @end
-
 @implementation OCExpressionView: UIView
 
-- (CGFloat *) scale
+
+- (CGFloat) scale1
 {
-    _scale = 2 / 3;
+    _scale1 = 2 / 3;
     [self setNeedsDisplay];
-    return _scale;
+    return ((_scale1));
 }
 
-- (CGFloat *) linewidth
+- (CGFloat) linewidth
 {
     _linewidth = 3;
     [self setNeedsDisplay];
-    return _linewidth;
+    return (_linewidth);
 }
 
 - (UIColor *) color
@@ -40,16 +37,21 @@
     return _color;
 }
 
-//- (CGFloat *) faceRadius
+- (CGFloat) faceRadius
+{
+    CGFloat width = self.bounds.size.width;
+    CGFloat height = self.bounds.size.height;
+    
+    return  MIN(width, height) / 2 * _scale1;
+}
+
+//+ (CGPoint) faceCenter
 //{
-//    return  MIN(bounds.size.width, bounds.size.height) / 2 * _scale
+//    
+//    
+//    self.ExpressionView.center = CGPointMake(CGRectGetMidX(superview.bounds), CGRectGetMidY(superview.bounds));
 //}
-//
-//+ (CGPoint *) faceCenter
-//{
-//    return ([UIView convertPoint: center fromView: superview]);
-//}
-//
+
 
 //
 //UIBezierPath *facePath = [UIBezierPath bezierPathWithArcCenter: faceCenter

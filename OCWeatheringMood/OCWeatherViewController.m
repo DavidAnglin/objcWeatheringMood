@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  OCWeatherViewController.m
 //  OCWeatheringMood
 //
 //  Created by David Anglin on 3/1/16.
@@ -8,7 +8,7 @@
 
 #import "OCWeatherViewController.h"
 
-@interface OCWeatherViewController ()
+@interface OCWeatherViewController()
 
 @end
 
