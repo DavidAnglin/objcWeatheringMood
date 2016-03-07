@@ -8,14 +8,14 @@
 
 #import "OCHappySadViewController.h"
 
-@interface OCHappySadViewController () <ExpressionViewDataSource>;
+@interface OCHappySadViewController()
 
 
 @end
 
 @implementation OCHappySadViewController
 
-- (void) expressionView: (OCExpressionView *)expressionView
+- (void) expressionView: (OCExpressionView *) expressionView
 {
     _expressionView.dataSource = self;
 }
