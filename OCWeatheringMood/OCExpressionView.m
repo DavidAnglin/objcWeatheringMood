@@ -68,20 +68,15 @@
 //+ (CGPoint) faceCenter
 //{
 //    
-//    
-//    self.ExpressionView.center = CGPointMake(CGRectGetMidX(superview.bounds), CGRectGetMidY(superview.bounds));
 //}
-
-
-
 
 - (void)drawRect:(CGRect)rect {
     
 UIBezierPath *facePath = [UIBezierPath bezierPathWithArcCenter: _faceCenter
-                                                             radius:_faceRadius
-                                                         startAngle:0
-                                                           endAngle: 2*M_PI
-                                                          clockwise:YES];
+                                                        radius:_faceRadius
+                                                    startAngle:0
+                                                      endAngle: 2*M_PI
+                                                     clockwise:YES];
     
     facePath.lineWidth = _linewidth;
     [_color set];

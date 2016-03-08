@@ -10,6 +10,7 @@
 
 @interface OCHappySadViewController()
 
+@property (nonatomic, assign) CGRect bounds;
 
 @end
 

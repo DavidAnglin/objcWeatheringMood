@@ -7,16 +7,33 @@
 //
 
 #import "AppDelegate.h"
+#import "OCHappySadViewController.h"
+#import "OCWeatherViewController.h"
 
 @interface AppDelegate ()
+
 
 @end
 
 @implementation AppDelegate
 
+@synthesize weatherViewController, happySadViewController;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.weatherViewController = [[OCWeatherViewController alloc] init];
+    self.weatherViewController.view.frame = [[UIScreen mainScreen] bounds];
+    
+    self.happySadViewController = [[OCHappySadViewController alloc] init];
+    self.happySadViewController.view.frame = [[UIScreen mainScreen] bounds];
+    
+    [self.window addSubview:self.weatherViewController.view];
+    [self.window addSubview:self.happySadViewController.view];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
