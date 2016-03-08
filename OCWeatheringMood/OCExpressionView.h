@@ -16,21 +16,11 @@
 @interface OCExpressionView : UIView
 
 @property (weak) id <ExpressionViewDataSource> dataSource;
-@property (nonatomic)  CGFloat linewidth, scale1, faceRadius;
+@property (nonatomic)  CGFloat linewidth, scale, faceRadius;
 @property (nonatomic, strong) UIColor* color;
 @property (nonatomic) CGPoint faceCenter;
-typedef struct scaling {
-    CGFloat FaceRadiusToEyeRation;
-    CGFloat FaceRadiusToEyeOffsetRatio;
-    CGFloat FaceRadiusToEyeSeperationRatio;
-    CGFloat FaceRadiusToMouthWidthRatio;
-    CGFloat FaceRadiusToMouthHeightRatio;
-    CGFloat FaceRadiusToMouthOffsetRato;
-};
-typedef enum eye {
-    Left,
-    Right
-};
+
+
 
 
 @end
