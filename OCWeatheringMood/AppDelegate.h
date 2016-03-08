@@ -8,13 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class OCWeatherViewController;
-@class OCHappySadViewController;
-
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) OCWeatherViewController *weatherViewController;
-@property (strong, nonatomic) OCHappySadViewController *happySadViewController;
+
+
 @end
 
