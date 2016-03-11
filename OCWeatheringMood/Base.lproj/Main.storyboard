@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Vj-E7-4Ft">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hrg-TE-hIg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -27,21 +27,24 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Zip Code: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dt2-07-JE5">
                                 <rect key="frame" x="187" y="217" width="227" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="5qO-1i-IiS"/>
-                                    <constraint firstAttribute="width" constant="227" id="b5z-2w-fPa"/>
+                                    <constraint firstAttribute="width" constant="227" id="TqC-nD-cDs"/>
+                                    <constraint firstAttribute="height" constant="46" id="Vkd-HS-PYJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="92585" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M2q-dy-Emo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M2q-dy-Emo">
                                 <rect key="frame" x="187" y="271" width="227" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi4-1n-I4c">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi4-1n-I4c">
                                 <rect key="frame" x="187" y="309" width="227" height="50"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MgB-sR-spf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="See what Californians Think?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,20 +57,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dt2-07-JE5" firstAttribute="trailing" secondItem="M2q-dy-Emo" secondAttribute="trailing" id="0WF-Zf-62N"/>
                             <constraint firstItem="Rru-3e-DZ7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8rT-CZ-J9F"/>
+                            <constraint firstItem="dt2-07-JE5" firstAttribute="top" secondItem="Rru-3e-DZ7" secondAttribute="bottom" constant="67" id="9X0-Du-RYC"/>
+                            <constraint firstItem="M2q-dy-Emo" firstAttribute="trailing" secondItem="xi4-1n-I4c" secondAttribute="trailing" id="B6Q-QH-XXk"/>
                             <constraint firstItem="Rru-3e-DZ7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Bpt-dx-mAI"/>
+                            <constraint firstItem="dt2-07-JE5" firstAttribute="centerX" secondItem="Rru-3e-DZ7" secondAttribute="centerX" id="FPQ-Zt-3E5"/>
+                            <constraint firstItem="xi4-1n-I4c" firstAttribute="top" secondItem="M2q-dy-Emo" secondAttribute="bottom" constant="8" symbolic="YES" id="IvG-kZ-P8k"/>
+                            <constraint firstItem="dt2-07-JE5" firstAttribute="leading" secondItem="M2q-dy-Emo" secondAttribute="leading" id="LmH-l8-fl6"/>
                             <constraint firstItem="Rru-3e-DZ7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Lvo-aV-wZY"/>
-                            <constraint firstItem="dt2-07-JE5" firstAttribute="centerX" secondItem="Rru-3e-DZ7" secondAttribute="centerX" id="Lx5-a1-iaW"/>
-                            <constraint firstItem="M2q-dy-Emo" firstAttribute="top" secondItem="dt2-07-JE5" secondAttribute="bottom" constant="8" symbolic="YES" id="eJL-if-X1M"/>
-                            <constraint firstItem="M2q-dy-Emo" firstAttribute="trailing" secondItem="dt2-07-JE5" secondAttribute="trailing" id="g0d-Wp-FdX"/>
+                            <constraint firstItem="M2q-dy-Emo" firstAttribute="top" secondItem="dt2-07-JE5" secondAttribute="bottom" constant="8" symbolic="YES" id="N2Q-CZ-VJA"/>
+                            <constraint firstItem="M2q-dy-Emo" firstAttribute="leading" secondItem="xi4-1n-I4c" secondAttribute="leading" id="Ozj-SB-TIS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rru-3e-DZ7" secondAttribute="bottom" constant="450" id="iTM-A1-QsU"/>
-                            <constraint firstItem="M2q-dy-Emo" firstAttribute="leading" secondItem="dt2-07-JE5" secondAttribute="leading" id="vzs-1k-l9n"/>
-                            <constraint firstItem="dt2-07-JE5" firstAttribute="top" secondItem="Rru-3e-DZ7" secondAttribute="bottom" constant="67" id="vzu-r9-CFR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Weathering Mood" id="n2r-qq-x0b"/>
                     <connections>
-                        <outlet property="zipCode" destination="M2q-dy-Emo" id="KuU-5W-VQJ"/>
                         <outlet property="zipCodeSearch" destination="M2q-dy-Emo" id="bYr-cp-dnl"/>
                         <segue destination="oRu-4C-jkz" kind="showDetail" identifier="faceDecision" id="Mzq-SI-ERo"/>
                     </connections>
@@ -125,7 +130,7 @@
             <objects>
                 <splitViewController id="7Vj-E7-4Ft" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="EA5-1K-Yls" kind="relationship" relationship="masterViewController" id="UKE-2Z-LAr"/>
+                        <segue destination="EA5-1K-Yls" kind="relationship" relationship="masterViewController" id="4Dz-rT-dnZ"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wo-um-ZoE" userLabel="First Responder" sceneMemberID="firstResponder"/>

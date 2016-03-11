@@ -65,7 +65,7 @@
 
 
 
-//+ (CGPoint) faceCenter
+//- (CGPoint) faceCenter
 //{
 //    
 //}

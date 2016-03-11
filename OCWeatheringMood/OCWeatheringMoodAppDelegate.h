@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  OCWeatheringMoodAppDelegate.h
 //  OCWeatheringMood
 //
 //  Created by David Anglin on 3/1/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface OCWeatheringMoodAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

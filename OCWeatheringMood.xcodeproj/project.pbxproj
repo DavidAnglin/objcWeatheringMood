@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D7C3F0D11C865E99002A561E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C3F0D01C865E99002A561E /* main.m */; };
-		D7C3F0D41C865E99002A561E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C3F0D31C865E99002A561E /* AppDelegate.m */; };
+		D7C3F0D41C865E99002A561E /* OCWeatheringMoodAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C3F0D31C865E99002A561E /* OCWeatheringMoodAppDelegate.m */; };
 		D7C3F0D71C865E99002A561E /* OCWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C3F0D61C865E99002A561E /* OCWeatherViewController.m */; };
 		D7C3F0DA1C865E99002A561E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7C3F0D81C865E99002A561E /* Main.storyboard */; };
 		D7C3F0DC1C865E99002A561E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7C3F0DB1C865E99002A561E /* Assets.xcassets */; };
@@ -39,8 +39,8 @@
 /* Begin PBXFileReference section */
 		D7C3F0CC1C865E99002A561E /* OCWeatheringMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCWeatheringMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C3F0D01C865E99002A561E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D7C3F0D21C865E99002A561E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D7C3F0D31C865E99002A561E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D7C3F0D21C865E99002A561E /* OCWeatheringMoodAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCWeatheringMoodAppDelegate.h; sourceTree = "<group>"; };
+		D7C3F0D31C865E99002A561E /* OCWeatheringMoodAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCWeatheringMoodAppDelegate.m; sourceTree = "<group>"; };
 		D7C3F0D51C865E99002A561E /* OCWeatherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCWeatherViewController.h; sourceTree = "<group>"; };
 		D7C3F0D61C865E99002A561E /* OCWeatherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCWeatherViewController.m; sourceTree = "<group>"; };
 		D7C3F0D91C865E99002A561E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 		D7C3F0CE1C865E99002A561E /* OCWeatheringMood */ = {
 			isa = PBXGroup;
 			children = (
-				D7C3F0D21C865E99002A561E /* AppDelegate.h */,
-				D7C3F0D31C865E99002A561E /* AppDelegate.m */,
+				D7C3F0D21C865E99002A561E /* OCWeatheringMoodAppDelegate.h */,
+				D7C3F0D31C865E99002A561E /* OCWeatheringMoodAppDelegate.m */,
 				D7C3F0D81C865E99002A561E /* Main.storyboard */,
 				D7DAC85F1C87424C00CBA456 /* OCHappySadViewController.h */,
 				D7DAC8601C87424C00CBA456 /* OCHappySadViewController.m */,
@@ -285,7 +285,7 @@
 			files = (
 				D7DAC8611C87424C00CBA456 /* OCHappySadViewController.m in Sources */,
 				D7C3F0D71C865E99002A561E /* OCWeatherViewController.m in Sources */,
-				D7C3F0D41C865E99002A561E /* AppDelegate.m in Sources */,
+				D7C3F0D41C865E99002A561E /* OCWeatheringMoodAppDelegate.m in Sources */,
 				D7DAC85E1C87421100CBA456 /* OCExpressionView.m in Sources */,
 				D7C3F0D11C865E99002A561E /* main.m in Sources */,
 			);

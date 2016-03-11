@@ -1,18 +1,18 @@
 //
-//  AppDelegate.m
+//  OCWeatheringMoodAppDelegate.m
 //  OCWeatheringMood
 //
 //  Created by David Anglin on 3/1/16.
 //  Copyright © 2016 David Anglin. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "OCWeatheringMoodAppDelegate.h"
 
-@interface AppDelegate ()
+@interface OCWeatheringMoodAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation OCWeatheringMoodAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
