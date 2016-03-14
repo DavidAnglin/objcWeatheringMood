@@ -7,11 +7,14 @@
 //
 
 #import "OCExpressionView.h"
+
+IB_DESIGNABLE
 @import UIKit;
 
 @interface OCExpressionView ()
 
 @end
+
 @implementation OCExpressionView: UIView
 
 
@@ -65,10 +68,14 @@
 
 
 
-//- (CGPoint) faceCenter
-//{
-//    
-//}
+
+
+- (CGPoint) faceCenter
+{
+    UIView *view=[[UIView alloc] init];
+    view.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+    return _faceCenter;
+}
 
 - (void)drawRect:(CGRect)rect {
     
