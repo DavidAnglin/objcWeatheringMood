@@ -72,9 +72,7 @@ IB_DESIGNABLE
 
 - (CGPoint) faceCenter
 {
-    UIView *view=[[UIView alloc] init];
-    view.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
-    return _faceCenter;
+  
 }
 
 - (void)drawRect:(CGRect)rect {
