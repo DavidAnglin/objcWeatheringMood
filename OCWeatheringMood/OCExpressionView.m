@@ -13,71 +13,59 @@ IB_DESIGNABLE
 
 @interface OCExpressionView ()
 
-@property (nonatomic) CGPoint center;
 
 @end
 
 @implementation OCExpressionView: UIView
 
+@synthesize lineWidth = _lineWidth;
 
-- (void) setScale1: (CGFloat) scale1
-{
-    _scale1 = 0.75;
+
+
+- (CGPoint)getFaceCenter {
+    return [self convertPoint:self.center fromView:self.superview];
+}
+
+- (CGFloat)getFaceRadius {
+    return MIN(self.bounds.size.width, self.bounds.size.height) / 2 * self.scale;
+}
+
+-  (void)setLineWidth:(CGFloat)lineWidth{
+    _lineWidth = lineWidth;
     [self setNeedsDisplay];
 }
 
-- (void) setLinewidth: (CGFloat) linewidth
-{
-    _linewidth = 3;
-    _linewidth = linewidth;
+- (void)setColor:(UIColor *)color{
+    _color = color;
+    [self setNeedsDisplay];
+}
+
+- (void)setScale:(CGFloat)scale{
+    _scale = scale;
     [self setNeedsDisplay];
 }
 
 
-- (void) setColor: (UIColor *) color
-{
-    _color = UIColor.blueColor;
-    [self setNeedsDisplay];
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.lineWidth = 3;
+        self.color = [UIColor blueColor];
+        self.scale = 0.75;
+    }
+    return self;
 }
 
-- (void) setFaceRadius: (CGFloat) faceRadius
-{
-    _faceRadius = faceRadius;
-//    _faceRadius =  MIN(self.bounds.size.width, self.bounds.size.height) / 2 * _scale1;
-    _faceRadius = 10;
-}
-
-//struct Scaling {
-//    CGFloat FaceRadiusToEyeRation;
-//    CGFloat FaceRadiusToEyeOffsetRatio;
-//    CGFloat FaceRadiusToEyeSeperationRatio;
-//    CGFloat FaceRadiusToMouthWidthRatio;
-//    CGFloat FaceRadiusToMouthHeightRatio;
-//    CGFloat FaceRadiusToMouthOffsetRato;
-//};
-//
-//enum Eye  {
-//    Left,
-//    Right
-//};
-
-//+ (UIBezierPath) bezierPathForEye:(enum Eye) whichEye
-//{
-//    
-//}
 
 - (void)drawRect:(CGRect)rect
 {
-    UIBezierPath *facePath = [UIBezierPath bezierPath];
-                              
-    [facePath addArcWithCenter: self.center
-                        radius: 100
-                    startAngle: 0
-                      endAngle: 2*M_PI
-                     clockwise:YES];
-    
-    facePath.lineWidth = 3;
-    [_color set];
+    UIBezierPath *facePath = [UIBezierPath bezierPathWithArcCenter:self.faceCenter
+                                                            radius:self.faceRadius
+                                                        startAngle:0
+                                                          endAngle:(CGFloat)2*M_PI
+                                                         clockwise:TRUE];
+    facePath.lineWidth = self.lineWidth;
+    [self.color set];
     [facePath stroke];
 
     
