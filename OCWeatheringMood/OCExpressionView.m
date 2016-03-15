@@ -81,19 +81,7 @@ IB_DESIGNABLE
     [facePath stroke];
 
     
-//    CGPoint theCenter = CGPointMake(100., 100.);
-//    CGFloat innerRadius = 50.;
-//    CGFloat outerRadius = 60.;
-//    CGFloat startAngle = M_PI;
-//    CGFloat endAngle = 3*M_PI/2;
-//    
-//    UIBezierPath *aSegment = [UIBezierPath bezierPath];
-//    [aSegment addArcWithCenter:theCenter radius:innerRadius startAngle:startAngle endAngle:endAngle clockwise:YES];
-//    [aSegment addArcWithCenter:theCenter radius:outerRadius startAngle:endAngle endAngle:startAngle clockwise:NO];
-//    [aSegment closePath];
-//    [[UIColor redColor] setFill];
-//    [aSegment fill];
-//    
+
 }
 
 
