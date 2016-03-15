@@ -13,38 +13,38 @@ IB_DESIGNABLE
 
 @interface OCExpressionView ()
 
+@property (nonatomic) CGPoint center;
+
 @end
 
 @implementation OCExpressionView: UIView
 
 
-- (CGFloat) scale1
+- (void) setScale1: (CGFloat) scale1
 {
-    _scale = 0.75;
+    _scale1 = 0.75;
     [self setNeedsDisplay];
-    return _scale;
 }
 
-- (CGFloat) linewidth
+- (void) setLinewidth: (CGFloat) linewidth
 {
     _linewidth = 3;
+    _linewidth = linewidth;
     [self setNeedsDisplay];
-    return _linewidth;
 }
 
-- (UIColor *) color
+
+- (void) setColor: (UIColor *) color
 {
     _color = UIColor.blueColor;
     [self setNeedsDisplay];
-    return _color;
 }
 
-- (CGFloat) faceRadius
+- (void) setFaceRadius: (CGFloat) faceRadius
 {
-    CGFloat width = self.bounds.size.width;
-    CGFloat height = self.bounds.size.height;
-    
-    return  MIN(width, height) / 2 * _scale;
+    _faceRadius = faceRadius;
+//    _faceRadius =  MIN(self.bounds.size.width, self.bounds.size.height) / 2 * _scale1;
+    _faceRadius = 10;
 }
 
 //struct Scaling {
@@ -66,37 +66,37 @@ IB_DESIGNABLE
 //    
 //}
 
-
-
-
-
-- (CGPoint) faceCenter
+- (void)drawRect:(CGRect)rect
 {
-  
-}
-
-- (void)drawRect:(CGRect)rect {
+    UIBezierPath *facePath = [UIBezierPath bezierPath];
+                              
+    [facePath addArcWithCenter: self.center
+                        radius: 100
+                    startAngle: 0
+                      endAngle: 2*M_PI
+                     clockwise:YES];
     
-UIBezierPath *facePath = [UIBezierPath bezierPathWithArcCenter: _faceCenter
-                                                        radius:_faceRadius
-                                                    startAngle:0
-                                                      endAngle: 2*M_PI
-                                                     clockwise:YES];
-    
-    facePath.lineWidth = _linewidth;
+    facePath.lineWidth = 3;
     [_color set];
     [facePath stroke];
-    
-    
-    
-    
-    
-    
 
     
-    
-
+//    CGPoint theCenter = CGPointMake(100., 100.);
+//    CGFloat innerRadius = 50.;
+//    CGFloat outerRadius = 60.;
+//    CGFloat startAngle = M_PI;
+//    CGFloat endAngle = 3*M_PI/2;
+//    
+//    UIBezierPath *aSegment = [UIBezierPath bezierPath];
+//    [aSegment addArcWithCenter:theCenter radius:innerRadius startAngle:startAngle endAngle:endAngle clockwise:YES];
+//    [aSegment addArcWithCenter:theCenter radius:outerRadius startAngle:endAngle endAngle:startAngle clockwise:NO];
+//    [aSegment closePath];
+//    [[UIColor redColor] setFill];
+//    [aSegment fill];
+//    
 }
+
+
 
 @end
 

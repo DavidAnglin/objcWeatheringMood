@@ -7,6 +7,7 @@
 //
 
 #import "OCHappySadViewController.h"
+#import "OCExpressionView.h"
 
 @interface OCHappySadViewController()
 
@@ -15,16 +16,16 @@
 
 @implementation OCHappySadViewController
 
-- (void) expressionView: (OCExpressionView *) expressionView
-{
-    _expressionView.dataSource = self;
-}
+//- (void) expressionView: (OCExpressionView *) expressionView
+//{
+//    _expressionView.dataSource = self;
+//}
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.expressionView.color = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning {
