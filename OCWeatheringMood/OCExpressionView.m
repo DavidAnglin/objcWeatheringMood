@@ -46,7 +46,7 @@ IB_DESIGNABLE
 }
 
 
--(id)initWithCoder:(NSCoder *)aDecoder{
+-(instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.lineWidth = 3;
@@ -59,11 +59,11 @@ IB_DESIGNABLE
 
 - (void)drawRect:(CGRect)rect
 {
-    UIBezierPath *facePath = [UIBezierPath bezierPathWithArcCenter:self.faceCenter
-                                                            radius:self.faceRadius
-                                                        startAngle:0
-                                                          endAngle:(CGFloat)2*M_PI
-                                                         clockwise:TRUE];
+    UIBezierPath *facePath = [UIBezierPath bezierPathWithArcCenter: self.faceCenter
+                                                            radius: self.faceRadius
+                                                        startAngle: 0
+                                                          endAngle: (CGFloat)2*M_PI
+                                                         clockwise: TRUE];
     facePath.lineWidth = self.lineWidth;
     [self.color set];
     [facePath stroke];

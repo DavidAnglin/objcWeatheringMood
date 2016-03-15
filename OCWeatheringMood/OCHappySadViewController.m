@@ -16,16 +16,15 @@
 
 @implementation OCHappySadViewController
 
-//- (void) expressionView: (OCExpressionView *) expressionView
-//{
-//    _expressionView.dataSource = self;
-//}
+- (void) expressionView: (OCExpressionView *) expressionView
+{
+    _expressionView.dataSource = self;
+}
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.expressionView.color = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning {

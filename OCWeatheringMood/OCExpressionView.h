@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-//@protocol ExpressionViewDataSource
-// - (double)smilinessForExpressionView: ExpressionView;
-//
-//@end
+@protocol ExpressionViewDataSource
+ - (double)smilinessForExpressionView: ExpressionView;
+
+@end
 
 @interface OCExpressionView : UIView
 
-//@property (weak) id <ExpressionViewDataSource> dataSource;
+@property (weak) id <ExpressionViewDataSource> dataSource;
 @property (nonatomic, getter=getLineWidth, setter=setLineWidth:)CGFloat lineWidth;
 @property (nonatomic, getter=getColor, setter=setColor:)UIColor *color;
 @property (nonatomic, getter=getScale, setter=setScale:)CGFloat scale;
