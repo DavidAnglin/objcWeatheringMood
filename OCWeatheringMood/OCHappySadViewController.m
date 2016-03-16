@@ -11,26 +11,46 @@
 
 @interface OCHappySadViewController()
 
+@property (nonatomic) double temperture;
+@property (strong, nonatomic) NSString *city;
+@property (nonatomic) int happySad;
 
 @end
 
 @implementation OCHappySadViewController
 
-- (void) expressionView: (OCExpressionView *) expressionView
+- (void) setExpressionView: (OCExpressionView *) expressionView
 {
-    _expressionView.dataSource = self;
+    expressionView.dataSource = self;
+    [self updateUI];
 }
 
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void) setHappySad:(int)happySad
+{
+    _happySad = happySad;
+    happySad = MIN(MAX(_happySad, 0), 100);
+    [self updateUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) updateUI
+{
+    [self.expressionView setNeedsDisplay];
 }
+
+- (double) smilinessForExpressionView:(id) expressionView
+{
+    return (double) (self.happySad - 50) / 50;
+}
+
+-(instancetype) initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.happySad = 75;
+        printf("%i", self.happySad);
+    }
+    return self;
+}
+
 
 /*
 #pragma mark - Navigation

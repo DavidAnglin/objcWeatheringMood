@@ -8,7 +8,7 @@
 
 #import "OCExpressionView.h"
 
-IB_DESIGNABLE
+
 @import UIKit;
 
 @interface OCExpressionView ()
@@ -59,7 +59,6 @@ struct Scaling {
     _scale = scale;
     [self setNeedsDisplay];
 }
-
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
@@ -142,7 +141,7 @@ struct Scaling {
     [[self bezierPathForEye:Left] stroke];
     [[self bezierPathForEye:Right] stroke];
     
-    double smiliness = 0.5;
+    double smiliness = self.dataSource ? [self.dataSource smilinessForExpressionView:self] : 0;
     UIBezierPath *smilePath = [self bezierPathForSmile:smiliness];
     [smilePath stroke];
     

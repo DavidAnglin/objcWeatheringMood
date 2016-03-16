@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @protocol ExpressionViewDataSource
- - (double)smilinessForExpressionView: ExpressionView;
+ - (double)smilinessForExpressionView: expressionView;
 
 @end
 
