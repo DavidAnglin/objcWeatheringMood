@@ -45,7 +45,7 @@
 -(instancetype) initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.happySad = 75;
+        self.happySad = 50;
     }
     return self;
 }

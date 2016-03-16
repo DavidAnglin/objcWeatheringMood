@@ -18,7 +18,7 @@
 
 - (IBAction)moodyFace:(UIButton *)sender
 {
-    
+    [self performSegueWithIdentifier:@"faceDecision" sender:self];
 }
 
 -(void) setZipCodeText: (NSString *) zipCodeText
