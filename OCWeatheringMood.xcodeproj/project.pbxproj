@@ -107,8 +107,6 @@
 		D7C3F0CE1C865E99002A561E /* OCWeatheringMood */ = {
 			isa = PBXGroup;
 			children = (
-				D7C3F0D21C865E99002A561E /* OCWeatheringMoodAppDelegate.h */,
-				D7C3F0D31C865E99002A561E /* OCWeatheringMoodAppDelegate.m */,
 				D7C3F0D81C865E99002A561E /* Main.storyboard */,
 				D7DAC85F1C87424C00CBA456 /* OCHappySadViewController.h */,
 				D7DAC8601C87424C00CBA456 /* OCHappySadViewController.m */,
@@ -124,6 +122,8 @@
 		D7C3F0CF1C865E99002A561E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D7C3F0D31C865E99002A561E /* OCWeatheringMoodAppDelegate.m */,
+				D7C3F0D21C865E99002A561E /* OCWeatheringMoodAppDelegate.h */,
 				D7C3F0DB1C865E99002A561E /* Assets.xcassets */,
 				D7C3F0E01C865E99002A561E /* Info.plist */,
 				D7C3F0DD1C865E99002A561E /* LaunchScreen.storyboard */,

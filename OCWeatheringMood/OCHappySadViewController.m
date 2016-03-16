@@ -46,7 +46,6 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.happySad = 75;
-        printf("%i", self.happySad);
     }
     return self;
 }

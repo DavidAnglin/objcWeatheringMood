@@ -13,6 +13,8 @@
 @interface OCWeatherViewController : OCHappySadViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *zipCodeSearch;
+@property (nonatomic) double temp;
+@property (strong,nonatomic) NSString *cityName;
 
 
 @end
