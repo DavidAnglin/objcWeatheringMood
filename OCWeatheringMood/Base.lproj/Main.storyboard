@@ -93,17 +93,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHz-9G-VWv" customClass="OCExpressionView">
-                                <rect key="frame" x="122" y="132" width="357" height="335"/>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YHz-9G-VWv" customClass="OCExpressionView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YHz-9G-VWv" firstAttribute="bottom" secondItem="SWk-Rz-Lce" secondAttribute="top" id="0F6-4q-SSj"/>
-                            <constraint firstAttribute="trailing" secondItem="YHz-9G-VWv" secondAttribute="trailing" id="Lsh-TB-cQ9"/>
-                            <constraint firstItem="YHz-9G-VWv" firstAttribute="top" secondItem="pC1-XW-pH6" secondAttribute="top" id="jXQ-mk-Cmh"/>
-                            <constraint firstItem="YHz-9G-VWv" firstAttribute="leading" secondItem="pC1-XW-pH6" secondAttribute="leading" id="qvt-P3-v5Q"/>
+                            <constraint firstItem="YHz-9G-VWv" firstAttribute="top" secondItem="pC1-XW-pH6" secondAttribute="top" id="CGE-3p-BiM"/>
+                            <constraint firstAttribute="trailing" secondItem="YHz-9G-VWv" secondAttribute="trailing" id="Poe-bp-YlM"/>
+                            <constraint firstItem="YHz-9G-VWv" firstAttribute="bottom" secondItem="SWk-Rz-Lce" secondAttribute="top" id="TbK-pF-mMZ"/>
+                            <constraint firstItem="YHz-9G-VWv" firstAttribute="leading" secondItem="pC1-XW-pH6" secondAttribute="leading" id="tZc-EU-0vR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AUL-c0-VCL"/>

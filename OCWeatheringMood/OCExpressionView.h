@@ -22,18 +22,6 @@
 @property (readonly, getter=getFaceCenter)CGPoint faceCenter ;
 @property (readonly, getter=getFaceRadius)CGFloat faceRadius ;
 
-typedef enum{
-    Left, Right
-}Eye;
 
-struct Scaling {
-    CGFloat FaceRadiusToEyeRadiusRatio;
-    CGFloat FaceRadiusToEyeOffsetRatio;
-    CGFloat FaceRadiusToEyeSeparationRatio;
-    CGFloat FaceRadiusToMouthWidthRatio;
-    CGFloat FaceRadiusToMouthHeightRatio;
-    CGFloat FaceRadiusToMouthOffsetRatio;
-};
-@property struct Scaling scaling;
 
 @end
