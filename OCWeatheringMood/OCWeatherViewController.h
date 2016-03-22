@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "OCExpressionView.h"
 #import "OCHappySadViewController.h"
+#import "OCWeatherApiCall.h"
 
-@interface OCWeatherViewController : OCHappySadViewController
+@interface OCWeatherViewController : OCHappySadViewController <OpenWeatherMapDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *zipCodeSearch;
 @property (nonatomic) double temp;
 @property (strong,nonatomic) NSString *cityName;
+
 
 
 @end
