@@ -19,10 +19,10 @@
      [manager GET: url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *jsonDict = (NSDictionary *) responseObject;
         NSLog(@"%@", [jsonDict description]);
-        self.weatherTemp = [[jsonDict objectForKey:@"temp"] doubleValue];
-         printf("%g", self.weatherTemp);
-        self.cityName = [jsonDict objectForKey:@"name"];
-         printf("%@", self.cityName);
+        self.weatherTemp = [[jsonDict valueForKey:@"temp"] doubleValue];
+         NSLog(@"%g", self.weatherTemp);
+        self.cityName = [jsonDict valueForKey:@"name"];
+         NSLog(@"%@", self.cityName);
         dispatch_async(dispatch_get_main_queue(), ^{
                 [self.delegate updateMood];
         });
