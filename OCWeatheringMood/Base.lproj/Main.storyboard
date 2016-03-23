@@ -90,7 +90,23 @@
                         <subviews>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YHz-9G-VWv" customClass="OCExpressionView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Pgv-rN-m0g">
+                                        <rect key="frame" x="8" y="555" width="584" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="ctD-Fh-7ph"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Pgv-rN-m0g" firstAttribute="trailing" secondItem="YHz-9G-VWv" secondAttribute="trailingMargin" id="9na-NJ-9gq"/>
+                                    <constraint firstItem="Pgv-rN-m0g" firstAttribute="leading" secondItem="YHz-9G-VWv" secondAttribute="leadingMargin" id="Hsl-iV-oCJ"/>
+                                    <constraint firstItem="Pgv-rN-m0g" firstAttribute="bottom" secondItem="YHz-9G-VWv" secondAttribute="bottomMargin" id="PSy-dd-ZKC"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -104,6 +120,7 @@
                     <navigationItem key="navigationItem" id="AUL-c0-VCL"/>
                     <connections>
                         <outlet property="expressionView" destination="YHz-9G-VWv" id="4Iw-Yo-l1d"/>
+                        <outlet property="infoLabel" destination="Pgv-rN-m0g" id="dQL-xw-nfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUQ-sY-SaF" userLabel="First Responder" sceneMemberID="firstResponder"/>

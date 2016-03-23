@@ -32,36 +32,25 @@
     [self.weatherData getDegrees];
 }
 
-- (void) setTemp:(double)temp
-{
-    _temp = temp;
-}
-
-- (void) setCityName:(NSString *)cityName
-{
-    _cityName = cityName;
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"faceDecision"]) {
-        UINavigationController *navController = (UINavigationController*)[segue destinationViewController];
-        OCHappySadViewController *hsvc = [navController topViewController];
-        if (_temp <= 50) {
+        OCHappySadViewController *hsvc = (OCHappySadViewController *)[[segue destinationViewController] topViewController];
+        if (self.temp <= 50) {
             hsvc.happySad = 0;
-            hsvc.temperture = _temp;
-            hsvc.city = _cityName;
+            hsvc.temperture = self.temp;
+            hsvc.city = self.cityName;
             hsvc.title = @"Cold";
-        } else if (_temp >= 50 && _temp <= 75) {
+        } else if (self.temp >= 50 && self.temp <= 75) {
             hsvc.happySad = 70;
-            hsvc.temperture = _temp;
-            hsvc.city = _cityName;
-            hsvc.title = @"Alright";
+            hsvc.temperture = self.temp;
+            hsvc.city = self.cityName;
+            hsvc.title = @"Cool";
         } else {
             hsvc.happySad = 100;
-            hsvc.temperture = _temp;
-            hsvc.city = _cityName;
-            hsvc.title = @"Happy";
+            hsvc.temperture = self.temp;
+            hsvc.city = self.cityName;
+            hsvc.title = @"Nice";
         }
     }
 }

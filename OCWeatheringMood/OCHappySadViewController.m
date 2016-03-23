@@ -9,6 +9,12 @@
 #import "OCHappySadViewController.h"
 #import "OCExpressionView.h"
 
+@interface OCHappySadViewController()
+
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+
+@end
+
 
 @implementation OCHappySadViewController
 
@@ -23,6 +29,12 @@
     _happySad = happySad;
     happySad = MIN(MAX(_happySad, 0), 100);
     [self updateUI];
+}
+
+- (void) setInfoLabel:(UILabel *)infoLabel
+{
+    _infoLabel = infoLabel;
+    self.infoLabel.text = [NSString stringWithFormat: @"In the City of %@ the Temperture is %g°", self.city, self.temperture];
 }
 
 - (void) updateUI
