@@ -14,6 +14,7 @@
 @property (strong, nonatomic) OCWeatherApiCall *weatherData;
 @property (strong, nonatomic) NSString *zipCodeText;
 
+
 @end
 
 @implementation OCWeatherViewController
@@ -29,25 +30,24 @@
 {
     self.weatherData.zipCode = self.zipCodeSearch.text;
     [self.weatherData getDegrees];
-    [self performSegueWithIdentifier:@"faceDecision" sender:self];
-    printf("here");
 }
 
 - (void) updateMood
 {
-    _cityName = self.weatherData.cityName;
-    _temp = self.weatherData.weatherTemp;
-
+    self.cityName = self.weatherData.cityName;
+    self.temp = self.weatherData.weatherTemp;
+    [self performSegueWithIdentifier:@"faceDecision" sender:self];
 }
 
 -(void) setZipCodeText: (NSString *) zipCodeText
 {
-    self.zipCodeSearch.text = _zipCodeText;
     _zipCodeText = zipCodeText;
+    zipCodeText = self.zipCodeSearch.text;
 }
 
 - (void) setZipCodeSearch:(UITextField *)zipCodeSearch
 {
+    _zipCodeSearch = zipCodeSearch;
     zipCodeSearch.delegate = self;
     zipCodeSearch.text = self.zipCodeText;
 }
