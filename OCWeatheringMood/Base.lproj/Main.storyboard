@@ -91,7 +91,7 @@
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YHz-9G-VWv" customClass="OCExpressionView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Pgv-rN-m0g">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pgv-rN-m0g">
                                         <rect key="frame" x="8" y="555" width="584" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="ctD-Fh-7ph"/>
