@@ -19,7 +19,7 @@
      [manager GET: url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *jsonDict = (NSDictionary *) responseObject;
         NSLog(@"%@", [jsonDict description]);
-        self.weatherTemp = [[jsonDict valueForKey:@"temp"] doubleValue];
+        self.weatherTemp = [[[jsonDict objectForKey:@"main"] valueForKey:@"temp"] doubleValue];
          NSLog(@"%g", self.weatherTemp);
         self.cityName = [jsonDict valueForKey:@"name"];
          NSLog(@"%@", self.cityName);
