@@ -21,23 +21,18 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
+    _weatherData = [[OCWeatherApiCall alloc] init];
     _weatherData.delegate = self;
 }
 
-
-- (void) setWeatherData:(OCWeatherApiCall *)weatherData
-{
-    _weatherData = weatherData;
-}
-    
 - (IBAction)moodyFace:(UIButton *)sender
 {
     self.weatherData.zipCode = self.zipCodeSearch.text;
     [self.weatherData getDegrees];
     [self performSegueWithIdentifier:@"faceDecision" sender:self];
-
+    printf("here");
 }
-    
+
 - (void) updateMood
 {
     _cityName = self.weatherData.cityName;
