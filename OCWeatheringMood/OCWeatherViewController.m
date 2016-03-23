@@ -32,6 +32,29 @@
     [self.weatherData getDegrees];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"faceDecision"]) {
+        if ([segue.destinationViewController isKindOfClass:[OCWeatherViewController class]]) {
+            OCHappySadViewController *hsvc = (OCHappySadViewController *)segue.destinationViewController;
+            if (self.temp <= 50) {
+                hsvc.happySad = 0;
+                hsvc.temperture = self.temp;
+                hsvc.city = self.cityName;
+            } else if (self.temp >= 50 && self.temp <= 75) {
+                hsvc.happySad = 65;
+                hsvc.temperture = self.temp;
+                hsvc.city = self.cityName;
+            } else {
+                hsvc.happySad = 100;
+                hsvc.temperture = self.temp;
+                hsvc.city = self.cityName;
+            }
+        }
+    }
+}
+
+
 - (void) updateMood
 {
     self.cityName = self.weatherData.cityName;

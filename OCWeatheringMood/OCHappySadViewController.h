@@ -12,5 +12,9 @@
 @interface OCHappySadViewController : UIViewController  <ExpressionViewDataSource> 
 
 @property (weak, nonatomic) IBOutlet OCExpressionView *expressionView;
+@property (nonatomic) double temperture;
+@property (strong, nonatomic) NSString *city;
+@property (nonatomic) int happySad;
 
 @end
+

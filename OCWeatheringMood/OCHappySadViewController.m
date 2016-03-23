@@ -9,13 +9,6 @@
 #import "OCHappySadViewController.h"
 #import "OCExpressionView.h"
 
-@interface OCHappySadViewController()
-
-@property (nonatomic) double temperture;
-@property (strong, nonatomic) NSString *city;
-@property (nonatomic) int happySad;
-
-@end
 
 @implementation OCHappySadViewController
 

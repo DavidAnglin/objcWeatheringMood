@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Vj-E7-4Ft">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Vj-E7-4Ft">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,32 +19,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How does the weather make you feel?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Rru-3e-DZ7">
-                                <rect key="frame" x="20" y="72" width="560" height="78"/>
+                                <rect key="frame" x="20" y="64" width="560" height="86"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Zip Code: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dt2-07-JE5">
-                                <rect key="frame" x="187" y="217" width="227" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="227" id="TqC-nD-cDs"/>
-                                    <constraint firstAttribute="height" constant="46" id="Vkd-HS-PYJ"/>
-                                </constraints>
+                                <rect key="frame" x="187" y="248" width="227" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M2q-dy-Emo">
-                                <rect key="frame" x="187" y="271" width="227" height="30"/>
+                                <rect key="frame" x="187" y="285" width="227" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="19v-kv-D8B"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi4-1n-I4c">
-                                <rect key="frame" x="187" y="309" width="227" height="50"/>
+                                <rect key="frame" x="187" y="323" width="227" height="33"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="MgB-sR-spf"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="See what Californians Think?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,18 +53,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dt2-07-JE5" firstAttribute="trailing" secondItem="M2q-dy-Emo" secondAttribute="trailing" id="0WF-Zf-62N"/>
-                            <constraint firstItem="Rru-3e-DZ7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8rT-CZ-J9F"/>
-                            <constraint firstItem="dt2-07-JE5" firstAttribute="top" secondItem="Rru-3e-DZ7" secondAttribute="bottom" constant="67" id="9X0-Du-RYC"/>
-                            <constraint firstItem="M2q-dy-Emo" firstAttribute="trailing" secondItem="xi4-1n-I4c" secondAttribute="trailing" id="B6Q-QH-XXk"/>
-                            <constraint firstItem="Rru-3e-DZ7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Bpt-dx-mAI"/>
-                            <constraint firstItem="dt2-07-JE5" firstAttribute="centerX" secondItem="Rru-3e-DZ7" secondAttribute="centerX" id="FPQ-Zt-3E5"/>
-                            <constraint firstItem="xi4-1n-I4c" firstAttribute="top" secondItem="M2q-dy-Emo" secondAttribute="bottom" constant="8" symbolic="YES" id="IvG-kZ-P8k"/>
-                            <constraint firstItem="dt2-07-JE5" firstAttribute="leading" secondItem="M2q-dy-Emo" secondAttribute="leading" id="LmH-l8-fl6"/>
-                            <constraint firstItem="Rru-3e-DZ7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Lvo-aV-wZY"/>
-                            <constraint firstItem="M2q-dy-Emo" firstAttribute="top" secondItem="dt2-07-JE5" secondAttribute="bottom" constant="8" symbolic="YES" id="N2Q-CZ-VJA"/>
-                            <constraint firstItem="M2q-dy-Emo" firstAttribute="leading" secondItem="xi4-1n-I4c" secondAttribute="leading" id="Ozj-SB-TIS"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rru-3e-DZ7" secondAttribute="bottom" constant="450" id="iTM-A1-QsU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rru-3e-DZ7" secondAttribute="trailing" id="B5l-Wu-diE"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Rru-3e-DZ7" secondAttribute="leading" id="E3i-np-NXx"/>
+                            <constraint firstItem="xi4-1n-I4c" firstAttribute="trailing" secondItem="M2q-dy-Emo" secondAttribute="trailing" id="MDP-U9-DA4"/>
+                            <constraint firstItem="M2q-dy-Emo" firstAttribute="trailing" secondItem="dt2-07-JE5" secondAttribute="trailing" id="PgU-gq-elf"/>
+                            <constraint firstItem="xi4-1n-I4c" firstAttribute="leading" secondItem="M2q-dy-Emo" secondAttribute="leading" id="QD3-Qc-bVi"/>
+                            <constraint firstItem="xi4-1n-I4c" firstAttribute="top" secondItem="M2q-dy-Emo" secondAttribute="bottom" constant="8" symbolic="YES" id="QNG-WQ-Tdp"/>
+                            <constraint firstItem="M2q-dy-Emo" firstAttribute="centerX" secondItem="Rru-3e-DZ7" secondAttribute="centerX" id="TYC-GJ-LXe"/>
+                            <constraint firstItem="M2q-dy-Emo" firstAttribute="leading" secondItem="dt2-07-JE5" secondAttribute="leading" id="e1Q-im-IRa"/>
+                            <constraint firstItem="M2q-dy-Emo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gUs-dd-LFe"/>
+                            <constraint firstItem="Rru-3e-DZ7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hbF-RU-vlj"/>
+                            <constraint firstItem="M2q-dy-Emo" firstAttribute="top" secondItem="dt2-07-JE5" secondAttribute="bottom" constant="8" symbolic="YES" id="lip-Zl-m1n"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Weathering Mood" id="n2r-qq-x0b"/>

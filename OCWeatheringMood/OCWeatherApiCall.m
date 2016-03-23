@@ -14,13 +14,15 @@
 - (void) getDegrees
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager.requestSerializer setValue:@"Content-Type" forHTTPHeaderField:@"application/json"];
     NSString *url = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?zip=%@,us&units=imperial&appid=625e9e3bac6a3dde3d015dee3e1b54e1", self.zipCode];
      [manager GET: url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *jsonDict = (NSDictionary *) responseObject;
         NSLog(@"%@", [jsonDict description]);
-        NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", string);
+        self.weatherTemp = [[jsonDict objectForKey:@"temp"] doubleValue];
+         printf("%g", self.weatherTemp);
+        self.cityName = [jsonDict objectForKey:@"name"];
+         printf("%@", self.cityName);
         dispatch_async(dispatch_get_main_queue(), ^{
                 [self.delegate updateMood];
         });
